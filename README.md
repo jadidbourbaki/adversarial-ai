@@ -15,7 +15,9 @@ These materials can be used either as a stand-alone and self-contained course on
 
 **For Contributors**: Check out our [🤝 Contributing Guide](CONTRIBUTING.md) to help improve the course materials.
 
-
+### Contact
+- 🐛 **Issues**: [GitHub Issues](https://github.com/jadidbourbaki/adversarial-ai/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/jadidbourbaki/adversarial-ai/discussions)
 
 ## 📋 Prerequisites
 
@@ -59,6 +61,10 @@ Generate adversarial examples that fool deep learning models.
 - 📝 Hands-on programming assignment
 
 [**➡️ Start Part 3**](part3/)
+
+## 👥 Acknowledgements
+
+See [AUTHORS.md](AUTHORS.md) for detailed credits. 
 
 ## Disclaimer
 
