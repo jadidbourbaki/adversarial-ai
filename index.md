@@ -9,7 +9,7 @@ title: "Hands-On Adversarial AI"
 
 Designed to be used either as a stand-alone and self-contained course, or as a practical component of a more detailed university-level course on adversarial AI / machine learning and related topics.
 
-[📚 Instructor Manual](https://github.com/jadidbourbaki/adversarial-ai/blob/main/INSTRUCTOR_MANUAL.md) • [🤝 Contributing Guide](https://github.com/jadidbourbaki/adversarial-ai/blob/main/CONTRIBUTING.md) • [👥 Acknowledgements](https://github.com/jadidbourbaki/adversarial-ai/blob/main/AUTHORS.md)
+[📚 Instructor Manual]({{ site.baseurl }}/instructor_manual/) • [🤝 Contributing Guide]({{ site.baseurl }}/contributing/) • [👥 Acknowledgements]({{ site.baseurl }}/authors/)
 
 ## 📋 Prerequisites
 

@@ -1,6 +1,5 @@
 ---
 layout: page
-title: "Part 2: Neural Network Fundamentals"
 permalink: /part2/
 ---
 

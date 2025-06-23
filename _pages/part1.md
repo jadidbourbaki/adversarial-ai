@@ -1,6 +1,5 @@
 ---
 layout: page
-title: "Part 1: Classical Adversarial Thinking"
 permalink: /part1/
 ---
 

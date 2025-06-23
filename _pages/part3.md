@@ -1,6 +1,5 @@
 ---
 layout: page
-title: "Part 3: Adversarial Examples and Attacks"
 permalink: /part3/
 ---
 
