@@ -11,6 +11,20 @@
 
 These materials can be used either as a stand-alone and self-contained course on adversarial AI, or as a hands-on component of a more detailed university-level course on adversarial AI and related topics.
 
+**For Instructors**: See the [📚 Instructor Manual](INSTRUCTOR_MANUAL.md) for accessing encrypted solutions and course management.
+
+**For Contributors**: Check out our [🤝 Contributing Guide](CONTRIBUTING.md) to help improve the course materials.
+
+
+
+## 📋 Prerequisites
+
+- Python 3 experience
+- Basic understanding of data structures and algorithms
+- Calculus 1 and Introductory Probability
+
+Note: no prior experience with machine learning or deep learning is required, we want to make these materials as self contained as possible.
+
 ## Structure
 
 ### Part 1: Classical Adversarial Thinking
@@ -45,14 +59,6 @@ Generate adversarial examples that fool deep learning models.
 - 📝 Hands-on programming assignment
 
 [**➡️ Start Part 3**](part3/)
-
-
-## 📋 Prerequisites
-
-- Python 3.7+ programming experience
-- Basic understanding of data structures and algorithms
-- Elementary statistics and mathematics
-- Familiarity with Jupyter notebooks
 
 ## Disclaimer
 
