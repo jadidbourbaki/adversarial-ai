@@ -1,11 +1,13 @@
 # Part 3: Adversarial Examples and Attacks
 
+**💡 Start Here**: [`setup_instructions.md`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part3/setup_instructions.md) → [`recitation3.ipynb`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part3/recitation3.ipynb) → [`assignment3.ipynb`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part3/assignment3.ipynb)
+
 Welcome to Part 3 of the Adversarial AI Course! In this module, you'll learn to generate adversarial examples that fool neural networks and explore defense mechanisms.
 
 ## 🚀 Getting Started
 
 ### Step 1: Setup Your Environment
-Follow the instructions in [`setup_instructions.md`](setup_instructions.md) to install required dependencies and set up your development environment.
+Follow the instructions in [`setup_instructions.md`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part3/setup_instructions.md) to install required dependencies and set up your development environment.
 
 ### Step 2: Complete the Recitation
 Work through `recitation3.ipynb` to understand the concepts through interactive demonstrations.

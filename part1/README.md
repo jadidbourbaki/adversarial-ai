@@ -1,6 +1,6 @@
 # Part 1: Classical Adversarial Thinking
 
-**💡 Start Here**: [`setup_instructions.md`](setup_instructions.md) → [`recitation1.ipynb`](recitation1.ipynb) → [`assignment1.ipynb`](assignment1.ipynb)
+**💡 Start Here**: [`setup_instructions.md`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part1/setup_instructions.md) → [`recitation1.ipynb`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part1/recitation1.ipynb) → [`assignment1.ipynb`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part1/assignment1.ipynb)
 
 ## 🎯 Learning Overview
 
@@ -9,7 +9,7 @@ Welcome to Part 1! In this module, you will learn how to think like an adversary
 ## 🚀 Getting Started
 
 ### Step 1: Setup Your Environment
-Follow the instructions in [`setup_instructions.md`](setup_instructions.md) to install required dependencies and set up your development environment.
+Follow the instructions in [`setup_instructions.md`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part1/setup_instructions.md) to install required dependencies and set up your development environment.
 
 ### Step 2: Complete the Recitation
 Work through `recitation1.ipynb` to understand the concepts through interactive demonstrations.

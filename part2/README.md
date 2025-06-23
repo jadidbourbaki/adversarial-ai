@@ -1,6 +1,6 @@
 # Part 2: Neural Network Fundamentals with PyTorch
 
-**💡 Start Here**: [`setup_instructions.md`](setup_instructions.md) → [`recitation2.ipynb`](recitation2.ipynb) → [`assignment2.ipynb`](assignment2.ipynb)
+**💡 Start Here**: [`setup_instructions.md`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part2/setup_instructions.md) → [`recitation2.ipynb`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part2/recitation2.ipynb) → [`assignment2.ipynb`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part2/assignment2.ipynb)
 
 
 Welcome to Part 2 of the Adversarial AI Course! In this module, you'll learn the fundamentals of deep learning using PyTorch and build a robust CNN for image classification.
@@ -8,7 +8,7 @@ Welcome to Part 2 of the Adversarial AI Course! In this module, you'll learn the
 ## 🚀 Getting Started
 
 ### Step 1: Setup Your Environment
-Follow the instructions in [`setup_instructions.md`](setup_instructions.md) to install required dependencies and set up your development environment.
+Follow the instructions in [`setup_instructions.md`](https://github.com/jadidbourbaki/adversarial-ai/blob/main/part2/setup_instructions.md) to install required dependencies and set up your development environment.
 
 ### Step 2: Complete the Recitation
 Work through `recitation2.ipynb` to understand the concepts through interactive demonstrations.
