@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![build](https://github.com/jadidbourbaki/adversarial-ai-assignments/workflows/build/badge.svg)](https://github.com/jadidbourbaki/adversarial-ai-assignments/actions?query=workflow%3Abuild)
 [![security-check](https://github.com/jadidbourbaki/adversarial-ai-assignments/workflows/security-check/badge.svg)](https://github.com/jadidbourbaki/adversarial-ai-assignments/actions?query=workflow%3A%22security-check%22)
-
+[![homepage](https://github.com/jadidbourbaki/adversarial-ai-assignments/workflows/homepage/badge.svg)](https://github.com/jadidbourbaki/adversarial-ai-assignments/actions?query=workflow%3A%22homepage%22)
 
 ## Overview
 
