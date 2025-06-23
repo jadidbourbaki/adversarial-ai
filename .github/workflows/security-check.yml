@@ -1,0 +1,140 @@
+name: security-check
+
+on:
+  workflow_dispatch:
+    inputs:
+      python_version:
+        description: 'Python version to use'
+        required: true
+        default: '3.10'
+        type: choice
+        options:
+        - '3.9'
+        - '3.10'
+        - '3.11'
+  schedule:
+    # Run weekly on Sundays at 2 AM UTC for security monitoring
+    - cron: '0 2 * * 0'
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ github.event.inputs.python_version || '3.10' }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ github.event.inputs.python_version || '3.10' }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install safety bandit
+        pip install -r part1/requirements.txt
+        pip install -r part2/requirements.txt
+        pip install -r part3/requirements.txt
+    
+    - name: Check for known security vulnerabilities
+      run: |
+        safety check --json --output safety-report.json || true
+        if [ -f safety-report.json ]; then
+          echo "Security vulnerabilities found:"
+          cat safety-report.json
+        else
+          echo "No security vulnerabilities found"
+        fi
+    
+    - name: Run bandit security linter
+      run: |
+        bandit -r . -f json -o bandit-report.json || true
+        if [ -f bandit-report.json ]; then
+          echo "Bandit security issues found:"
+          cat bandit-report.json
+        else
+          echo "No security issues found by bandit"
+        fi
+    
+    - name: Check for secrets in code
+      run: |
+        # Basic check for common secret patterns, excluding config files
+        echo "Checking for potential secrets in code..."
+        
+        # Find all relevant files excluding virtual environments and config files
+        relevant_files=$(find . -type f \( -name "*.py" -o -name "*.ipynb" -o -name "*.md" -o -name "*.yml" -o -name "*.yaml" -o -name "*.json" -o -name "*.txt" \) 2>/dev/null | grep -v "part.*_env" | grep -v ".git" | grep -v "__pycache__" | grep -v ".ipynb_checkpoints" | grep -v ".gitignore" | grep -v ".cursorignore" || true)
+        
+        if [ -z "$relevant_files" ]; then
+          echo "✓ No relevant files found to check"
+          exit 0
+        fi
+        
+        # Look for actual secret patterns with more precise matching
+        # Only look for actual assignments, not just the presence of words
+        potential_secrets=""
+        
+        # Check each file for secret patterns
+        while IFS= read -r file; do
+          if [ -f "$file" ]; then
+            # Check for password assignments (but not in comments or strings)
+            password_matches=$(grep -H "password\s*=\s*['\"][^'\"]*['\"]" "$file" 2>/dev/null || true)
+            if [ -n "$password_matches" ]; then
+              potential_secrets+="$password_matches"$'\n'
+            fi
+            
+            # Check for secret assignments
+            secret_matches=$(grep -H "secret\s*=\s*['\"][^'\"]*['\"]" "$file" 2>/dev/null || true)
+            if [ -n "$secret_matches" ]; then
+              potential_secrets+="$secret_matches"$'\n'
+            fi
+            
+            # Check for API key assignments
+            apikey_matches=$(grep -H "api_key\s*=\s*['\"][^'\"]*['\"]" "$file" 2>/dev/null || true)
+            if [ -n "$apikey_matches" ]; then
+              potential_secrets+="$apikey_matches"$'\n'
+            fi
+            
+            # Check for token assignments
+            token_matches=$(grep -H "token\s*=\s*['\"][^'\"]*['\"]" "$file" 2>/dev/null || true)
+            if [ -n "$token_matches" ]; then
+              potential_secrets+="$token_matches"$'\n'
+            fi
+            
+            # Check for private key assignments
+            privatekey_matches=$(grep -H "private_key\s*=\s*['\"][^'\"]*['\"]" "$file" 2>/dev/null || true)
+            if [ -n "$privatekey_matches" ]; then
+              potential_secrets+="$privatekey_matches"$'\n'
+            fi
+          fi
+        done <<< "$relevant_files"
+        
+        if [ -n "$potential_secrets" ]; then
+          echo "⚠️  Potential secrets found in code:"
+          echo "$potential_secrets" | sort | uniq
+          exit 1
+        else
+          echo "✓ No obvious secrets found in code"
+        fi
+
+  dependency-update:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.10
+    
+    - name: Check for outdated dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pip-review
+        echo "Checking part1 dependencies:"
+        pip-review --local --combine part1/requirements.txt || true
+        echo "Checking part2 dependencies:"
+        pip-review --local --combine part2/requirements.txt || true
+        echo "Checking part3 dependencies:"
+        pip-review --local --combine part3/requirements.txt || true 

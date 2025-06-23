@@ -1,0 +1,16 @@
+# Git-crypt configuration for encrypted solution files
+# ===================================================
+
+# Encrypt solved versions of ASSIGNMENTS only (not recitations)
+assignment*_solved.ipynb filter=git-crypt diff=git-crypt
+*_solutions.ipynb filter=git-crypt diff=git-crypt
+*_instructor.ipynb filter=git-crypt diff=git-crypt
+
+# Encrypt instructor notes and answer keys
+instructor_notes/* filter=git-crypt diff=git-crypt
+*_answers.md filter=git-crypt diff=git-crypt
+*_key.md filter=git-crypt diff=git-crypt
+grading_rubrics/* filter=git-crypt diff=git-crypt
+
+# Encrypt solution directories
+solutions/* filter=git-crypt diff=git-crypt 

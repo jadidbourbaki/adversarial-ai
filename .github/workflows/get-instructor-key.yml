@@ -1,0 +1,96 @@
+name: Get Instructor Key
+
+# This workflow can only be triggered manually by repository collaborators
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for accessing the instructor key'
+        required: true
+        type: string
+
+jobs:
+  get-key:
+    runs-on: ubuntu-latest
+    
+    # Only allow collaborators to run this workflow
+    if: github.actor != 'dependabot[bot]' && github.event_name == 'workflow_dispatch'
+    
+    steps:
+    - name: Check if user is a collaborator
+      uses: actions/github-script@v7
+      with:
+        script: |
+          try {
+            const { data: collaboration } = await github.rest.repos.getCollaboratorPermissionLevel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              username: context.actor
+            });
+            
+            const permission = collaboration.permission;
+            console.log(`User ${context.actor} has permission level: ${permission}`);
+            
+            // Allow admin, maintain, write permissions (collaborators)
+            if (!['admin', 'maintain', 'write'].includes(permission)) {
+              core.setFailed(`Access denied. User ${context.actor} does not have collaborator access.`);
+              return;
+            }
+            
+            console.log(`✅ Access granted to ${context.actor}`);
+          } catch (error) {
+            console.log(`❌ Error checking permissions: ${error.message}`);
+            core.setFailed(`Access denied. Unable to verify collaborator status.`);
+          }
+
+    - name: Log access attempt
+      run: |
+        echo "🔑 Instructor key access requested"
+        echo "👤 User: ${{ github.actor }}"
+        echo "📝 Reason: ${{ github.event.inputs.reason }}"
+        echo "⏰ Time: $(date -u)"
+        echo "🌐 Run ID: ${{ github.run_id }}"
+
+    - name: Provide instructor key
+      env:
+        INSTRUCTOR_KEY: ${{ secrets.INSTRUCTOR_KEY }}
+      run: |
+        echo "🔐 INSTRUCTOR KEY (Base64 Encoded)"
+        echo "=================================="
+        echo ""
+        if [ -z "$INSTRUCTOR_KEY" ]; then
+          echo "❌ ERROR: INSTRUCTOR_KEY secret is not set!"
+          echo ""
+          echo "Please add the secret to GitHub:"
+          echo "1. Go to Settings → Secrets and variables → Actions"
+          echo "2. Click 'New repository secret'"
+          echo "3. Name: INSTRUCTOR_KEY"
+          echo "4. Value: [base64 encoded key]"
+          exit 1
+        fi
+        
+        echo "Copy the following base64 string and use it with the instructor-setup.sh script:"
+        echo ""
+        echo "--- BEGIN INSTRUCTOR KEY ---"
+        # Split the key to avoid GitHub's automatic masking
+        echo "$INSTRUCTOR_KEY" | fold -w 80
+        echo "--- END INSTRUCTOR KEY ---"
+        echo ""
+        echo "📋 Usage Instructions:"
+        echo "1. Clone the repository: git clone <repo-url>"
+        echo "2. cd into the repository directory"
+        echo "3. Run: ./instructor-setup.sh"
+        echo "4. Copy the ENTIRE key (all lines between the markers) when prompted"
+        echo ""
+        echo "⚠️  Keep this key secure and do not share it publicly!"
+
+    - name: Security reminder
+      run: |
+        echo ""
+        echo "🛡️  SECURITY REMINDERS"
+        echo "====================="
+        echo "• This key provides access to assignment solutions"
+        echo "• Do not share this key with students"
+        echo "• Do not commit the decoded key file to any repository"
+        echo "• Use 'git-crypt lock' when you're done working with solutions"
+        echo "• Contact the repository maintainer if you suspect the key is compromised" 

@@ -1,0 +1,37 @@
+# Python virtual environment
+part1_env/
+part2_env/
+part3_env/
+part4_env/
+part5_env/
+part6_env/
+part7_env/
+part8_env/
+part9_env/
+part10_env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE files
+.vscode/
+.idea/
+
+# Mac system files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Log files
+*.log 

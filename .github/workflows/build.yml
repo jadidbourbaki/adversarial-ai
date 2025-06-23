@@ -1,0 +1,60 @@
+name: build
+
+on:
+  workflow_dispatch:
+    inputs:
+      python_version:
+        description: 'Python version to use'
+        required: true
+        default: '3.10'
+        type: choice
+        options:
+        - '3.9'
+        - '3.10'
+        - '3.11'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ github.event.inputs.python_version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ github.event.inputs.python_version }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r part1/requirements.txt
+        pip install -r part2/requirements.txt
+        pip install -r part3/requirements.txt
+    
+    - name: Build verification
+      run: |
+        echo "🔨 Building repository..."
+        
+        # Verify repository structure
+        echo "✓ Checking repository structure"
+        [ -f README.md ] || exit 1
+        [ -f LICENSE ] || exit 1
+        [ -d part1 ] || exit 1
+        [ -d part2 ] || exit 1
+        [ -d part3 ] || exit 1
+        
+        # Verify notebooks exist
+        echo "✓ Checking notebooks"
+        [ -f part1/assignment1.ipynb ] || exit 1
+        [ -f part2/assignment2.ipynb ] || exit 1
+        [ -f part3/assignment3.ipynb ] || exit 1
+        
+        # Verify notebook syntax
+        echo "✓ Validating notebook syntax"
+        find . -name "*.ipynb" -not -path "./part*/part*_env/*" | while read notebook; do
+          python -c "import nbformat; nbformat.read('$notebook', as_version=4)"
+        done
+        
+        echo "✅ Build successful!" 

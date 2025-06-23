@@ -1,0 +1,263 @@
+# Adversarial AI Course - Comprehensive .gitignore
+# =================================================
+
+# Virtual Environments (Course-specific)
+# ---------------------------------------
+part*_env/              # Pattern for all part environments (part1_env, part2_env, etc.)
+*_env/                  # Any environment ending with _env
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+part1/part1_env/
+part2/part2_env/
+part3/part3_env/
+part4/part4_env/
+part5/part5_env/
+part6/part6_env/
+part7/part7_env/
+
+part1/data
+part2/data
+part3/data
+part4/data
+part5/data
+part6/data
+part7/data
+
+# Machine Learning & Data Files
+# ------------------------------
+data/                   # MNIST and other datasets
+datasets/              # Alternative dataset location
+*.pkl                  # Pickle files (model checkpoints)
+*.pth                  # PyTorch model files
+*.pt                   # PyTorch tensors
+*.h5                   # HDF5 files (Keras/TensorFlow models)
+*.hdf5
+*.ckpt                 # TensorFlow checkpoints
+*.pb                   # TensorFlow protobuf files
+*.onnx                 # ONNX model files
+*.joblib               # Scikit-learn model files
+*.model                # Generic model files
+models/                # Model directory
+checkpoints/           # Checkpoint directory
+logs/                  # Training logs
+runs/                  # TensorBoard runs
+wandb/                 # Weights & Biases logs
+
+# Jupyter Notebooks
+# ------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+*.ipynb_checkpoints
+**/.ipynb_checkpoints/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Python Files
+# ------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.installed.cfg
+MANIFEST
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+
+# Testing & Coverage
+# ------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+nosetests.xml
+
+# Environment & Configuration Files
+# ----------------------------------
+.env
+.env.local
+.env.*.local
+*.secret
+config.json
+secrets.json
+
+# Operating System Files
+# -----------------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.tmp
+*.temp
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# IDE & Editor Files
+# ------------------
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Course-Specific Files
+# ---------------------
+# Student work (if creating instructor versions)
+*_student.ipynb
+*_solution.ipynb
+student_submissions/
+grading/
+
+# Assignment outputs
+assignment_outputs/
+results/
+experiments/
+plots/
+figures/
+*.png               # Generated plots (comment out if you want to track some plots)
+*.jpg
+*.jpeg
+*.pdf               # Generated reports (comment out if you want to track documentation)
+
+# Temporary computation files
+*.tmp
+*.temp
+.cache/
+tmp/
+temp/
+
+# Large files that might be accidentally added
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.dmg
+*.iso
+
+# Log files
+# ---------
+*.log
+logs/
+*.out
+*.err
+
+# Package managers
+# ----------------
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+pip-selfcheck.json
+
+# Conda
+.conda/
+
+# Poetry
+poetry.lock
+poetry.toml
+
+# pipenv
+Pipfile.lock
+
+# Database files
+# --------------
+*.db
+*.sqlite
+*.sqlite3
+
+# Security & Credentials
+# ----------------------
+*.key
+*.pem
+*.p12
+*.crt
+*.cer
+credentials.json
+token.json
+.aws/
+.gcp/
+
+# Miscellaneous
+# -------------
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+pyrightconfig.json
+
+# Custom course files to ignore
+# ------------------------------
+# Add any specific files you want to ignore for this course
+# Example: solutions for instructors
+# instructor_notes/
+# solutions/*.pth
+*.pth
+
+# Git-crypt key files (NEVER commit these!)
+# ------------------------------------------
+instructor-key.key
+*.key
+instructor-keys/
