@@ -12,11 +12,12 @@ Note: the **🌐 [website](https://jadidbourbaki.github.io/adversarial-ai)** pro
 
 ## Overview
 
-These materials can be used either as a stand-alone and self-contained course on adversarial AI, or as a hands-on component of a more detailed university-level course on adversarial AI and related topics.
+These materials can be used either as a stand-alone and self-contained course on adversarial AI, or as a hands-on component of a more detailed university-level course on adversarial AI and related topics. This project began from student lecture notes from [Dr. Allison Bishop](https://www.thecomputersciencecomedian.com/)’s graduate Adversarial AI course at the City College of New York.
 
 **For Instructors**: See the [📚 Instructor Manual](INSTRUCTOR_MANUAL.md) for accessing encrypted solutions and course management.
 
 **For Contributors**: Check out our [🤝 Contributing Guide](CONTRIBUTING.md) to help improve the course materials.
+
 
 ### Contact
 - 🐛 **Issues**: [GitHub Issues](https://github.com/jadidbourbaki/adversarial-ai/issues)

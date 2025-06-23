@@ -7,7 +7,7 @@ title: "Hands-On Adversarial AI"
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue.svg)](https://github.com/jadidbourbaki/adversarial-ai)
 
-Designed to be used either as a stand-alone and self-contained course, or as a practical component of a more detailed university-level course on adversarial AI / machine learning and related topics.
+Designed to be used either as a stand-alone and self-contained course, or as a practical component of a more detailed university-level course on adversarial AI / machine learning and related topics. This project began from student lecture notes from [Dr. Allison Bishop](https://www.thecomputersciencecomedian.com/)’s graduate Adversarial AI course at the City College of New York.
 
 [📚 Instructor Manual]({{ site.baseurl }}/instructor_manual/) • [🤝 Contributing Guide]({{ site.baseurl }}/contributing/) • [👥 Acknowledgements]({{ site.baseurl }}/authors/)
 
