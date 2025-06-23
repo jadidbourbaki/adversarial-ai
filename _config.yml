@@ -59,12 +59,13 @@ exclude:
   - part1/setup_instructions.md
   - part2/setup_instructions.md
   - part3/setup_instructions.md
-  - part1/README.md
-  - part2/README.md
-  - part3/README.md
+
   - instructor-setup.sh
   - serve.sh
 
 # Include
 include:
-  - _pages 
+  - _pages
+  - part1/README.md
+  - part2/README.md
+  - part3/README.md 
