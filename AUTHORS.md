@@ -18,17 +18,16 @@ If you use these materials in your research or teaching, please cite:
 }
 ```
 
+## 🎓 Creators & Maintainers
 
-## 🎓 Course Creators & Lead Maintainers
-
-- Maryam Tirmazi - [@m-m14](https://github.com/m-m14)
-- Hayder Tirmazi - [@jadidbourbaki](https://github.com/jadidbourbaki)
+- Maryam Tirmazi (@m-m14)
+- Hayder Tirmazi (@jadidbourbaki)
 
 ## 🙏 Acknowledgments
 
-- Adversarial AI course offered by [Dr. Allison Bishop](https://www.thecomputersciencecomedian.com/) at the City College of New York
+- This project is based on [Dr. Allison Bishop](https://www.thecomputersciencecomedian.com/)'s Adversarial AI course at the City College of New York.
 
-## 🏛️ Institutional Sponsors & Users
+<!-- ## 🏛️ Institutional Sponsors & Users
 
 ### Sponsors 
 
@@ -36,7 +35,7 @@ If you use these materials in your research or teaching, please cite:
 
 ### Users
 
-*Note: this section will be automatically updated as people contribute*
+*Note: this section will be automatically updated as people contribute* -->
 
 ## 🤝 Contributors
 

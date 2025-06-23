@@ -7,6 +7,9 @@
 [![security-check](https://github.com/jadidbourbaki/adversarial-ai-assignments/workflows/security-check/badge.svg)](https://github.com/jadidbourbaki/adversarial-ai-assignments/actions?query=workflow%3A%22security-check%22)
 [![Pages](https://github.com/jadidbourbaki/adversarial-ai-assignments/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/jadidbourbaki/adversarial-ai-assignments/actions/workflows/pages/pages-build-deployment)
 
+
+Note: the **🌐 [website](https://jadidbourbaki.github.io/adversarial-ai)** provides a better UX experience for these docs.
+
 ## Overview
 
 These materials can be used either as a stand-alone and self-contained course on adversarial AI, or as a hands-on component of a more detailed university-level course on adversarial AI and related topics.
@@ -17,7 +20,6 @@ These materials can be used either as a stand-alone and self-contained course on
 
 ### Contact
 - 🐛 **Issues**: [GitHub Issues](https://github.com/jadidbourbaki/adversarial-ai/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/jadidbourbaki/adversarial-ai/discussions)
 
 ## 📋 Prerequisites
 

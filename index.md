@@ -19,7 +19,7 @@ Designed to be used either as a stand-alone and self-contained course, or as a p
 
 Note: no prior experience with machine learning or deep learning is required, we want to make these materials as self contained as possible.
 
-## 🎓 Course Parts
+## 🎓 Components
 
 1. **[Part 1: Classical Adversarial Thinking]({{ site.baseurl }}/part1/)** - Hash function vulnerabilities and collision attacks
 2. **[Part 2: Neural Network Fundamentals]({{ site.baseurl }}/part2/)** - Building CNNs with PyTorch  
