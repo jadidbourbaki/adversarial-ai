@@ -1,0 +1,70 @@
+# Site settings
+title: "Hands-On Adversarial AI"
+description: "Educational materials for learning adversarial machine learning and security vulnerabilities"
+baseurl: "/adversarial-ai" # the subpath of your site, e.g. /blog
+url: "https://jadidbourbaki.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins (GitHub Pages compatible)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+
+# GitHub Pages settings
+repository: jadidbourbaki/adversarial-ai
+
+# Site configuration
+author:
+  name: "Maryam Tirmazi & Hayder Tirmazi"
+  email: ""
+
+# Social links
+github_username: jadidbourbaki
+repository: "jadidbourbaki/adversarial-ai"
+
+# Course information
+course:
+  parts: 3
+  format: "Jupyter Notebooks"
+  level: "Undergraduate/Graduate"
+
+# Header navigation (only these pages will appear in navigation)
+header_pages:
+  - _pages/part1.md
+  - _pages/part2.md
+  - _pages/part3.md
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - instructor-key.key
+  - "*.ipynb"
+  - ".git*"
+  - AUTHORS.md
+  - INSTRUCTOR_MANUAL.md
+  - WEBSITE_README.md
+  - CONTRIBUTING.md
+  - part1/setup_instructions.md
+  - part2/setup_instructions.md
+  - part3/setup_instructions.md
+  - part1/README.md
+  - part2/README.md
+  - part3/README.md
+  - instructor-setup.sh
+  - serve.sh
+
+# Include
+include:
+  - _pages 

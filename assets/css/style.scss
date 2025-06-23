@@ -1,0 +1,275 @@
+@import "minima";
+
+/* Custom styles for Adversarial AI course site */
+
+/* Course grid styling */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.course-part {
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-part:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.course-part h3 {
+    margin-top: 0;
+    color: #0366d6;
+    border-bottom: 2px solid #0366d6;
+    padding-bottom: 0.5rem;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #0366d6, #0256cc);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #0256cc, #024ea4);
+    color: white;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(3, 102, 214, 0.3);
+}
+
+/* Badge styling */
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.6em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    margin: 0.2em;
+}
+
+.badge-primary {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+.badge-warning {
+    color: #212529;
+    background-color: #ffc107;
+}
+
+/* Code block improvements */
+pre {
+    background: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+code {
+    background: #f3f4f6;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* Alert boxes */
+.alert {
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeaa7;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Navigation improvements */
+.site-nav .page-link {
+    color: #0366d6;
+    font-weight: 500;
+}
+
+.site-nav .page-link:hover {
+    color: #0256cc;
+}
+
+/* Header improvements */
+.site-header {
+    border-bottom: 2px solid #0366d6;
+}
+
+.site-title {
+    font-weight: 700;
+    color: #0366d6 !important;
+}
+
+.site-title:hover {
+    color: #0256cc !important;
+}
+
+/* Footer improvements */
+.site-footer {
+    background: #f8f9fa;
+    border-top: 1px solid #e1e4e8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .course-part {
+        padding: 1rem;
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+        margin: 1rem 0;
+    }
+}
+
+/* Security warning styling */
+.security-warning {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.security-warning::before {
+    content: "⚠️ ";
+    font-weight: bold;
+}
+
+/* Learning objectives styling */
+.learning-objectives {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-left: 4px solid #28a745;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.learning-objectives h3 {
+    color: #155724;
+    margin-top: 0;
+}
+
+/* Technical requirements */
+.tech-requirements {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    border-left: 4px solid #17a2b8;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.tech-requirements h3 {
+    color: #0c5460;
+    margin-top: 0;
+}
+
+/* Table improvements */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+table th,
+table td {
+    border: 1px solid #e1e4e8;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+table th {
+    background: #f6f8fa;
+    font-weight: 600;
+}
+
+/* Syntax highlighting improvements */
+.highlight {
+    background: #f6f8fa;
+    border-radius: 6px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+/* Link styling */
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0256cc;
+    text-decoration: underline;
+}
+
+/* List improvements */
+ul,
+ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Blockquote styling */
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: #6a737d;
+    font-style: italic;
+}

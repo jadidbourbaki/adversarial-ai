@@ -261,3 +261,12 @@ pyrightconfig.json
 instructor-key.key
 *.key
 instructor-keys/
+
+# Jekyll build files
+# ------------------
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+vendor/
