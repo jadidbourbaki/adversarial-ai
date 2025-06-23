@@ -33,4 +33,3 @@ Ready to dive into deep learning? Start with the setup instructions!
 
 ### PyTorch Resources
 - [PyTorch Official Tutorials](https://pytorch.org/tutorials/) - Comprehensive tutorials for learning PyTorch
-- [Deep Learning with PyTorch](https://pytorch.org/assets/deep-learning/Deep-Learning-with-PyTorch.pdf) - Free book on deep learning with PyTorch
